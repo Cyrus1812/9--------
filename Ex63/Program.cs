@@ -1,15 +1,14 @@
 ﻿Console.WriteLine("Введите число: ");
-bool line = int.TryParse(Console.ReadLine(), out int a);
-// Console.WriteLine("Введите количество строк в массиве: ");
-// bool column = int.TryParse(Console.ReadLine(), out int n);
+bool line = int.TryParse(Console.ReadLine(), out int m);
 
-if (!line || a < 1 )
+
+if (!line || m < 1 )
 {
     Console.WriteLine("Не верные введённые данные, попробуйте поменять значение.");
 }
 
-int[] newArray = new int[a]; 
-newArray = Recursive(a,0,1,newArray);
+int[] newArray = new int[m]; 
+newArray = Recursive(m,0,1,newArray);
 PrintArray(newArray);
 int[] Recursive(int a , int i,int m ,int[]array )
 {
